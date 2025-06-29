@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>waypoint: Grad School Search</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gradschool.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="majors.html">Explore Majors and Careers</a></li>
+          <li><a href="gradschool.html">Explore Graduate Schools and Faculty</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <h1><span>waypoint: Grad School Search</span></h1>
+        <p>Find the right school, research, and PI for you</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="sub-title">Explore Graduate Programs and Faculty</h1>
+  <nav>
+    <button onclick="switchTab('school')">School Search</button>
+    <button onclick="switchTab('faculty')">Faculty Search</button>
+  </nav>
+
+  <section id="filters-school">
+    <input type="text" id="schoolName" placeholder="School name" />
+    <input type="text" id="program" placeholder="Program" />
+    <input type="text" id="location" placeholder="Location" />
+    <input type="text" id="facultyInterest" placeholder="Research interests" />
+    <button onclick="filterResults()">Search</button>
+  </section>
+
+  <section id="filters-faculty">
+    <input type="text" id="facultyName" placeholder="Faculty name" />
+    <input type="text" id="facultyField" placeholder="Research area (e.g. Nanomaterials)" />
+    <button onclick="filterFaculty()">Search</button>
+  </section>
+
+  <section id="results"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>

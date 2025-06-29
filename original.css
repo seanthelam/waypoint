@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:10px;
+    font-family: 'Poppins';
+}
+a {
+    text-decoration: none;
+}
+#header {
+    width: 100%;
+    height:100vh;
+}
+.container {
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+nav ul li {
+    display:inline-block;
+    list-style:none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: black;
+    text-decoration:none;
+    font-size:18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition:0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+
+}
+.header-text {
+    font-size:30px;
+    color:black;
+}
+h1 {
+    font-size: 60px;
+    margin-top:20px;
+    color:black;
+}
+.header-text h1 span {
+    color:black;
+}
+
+
+/*about*/
+#about {
+    padding: 80px 0;
+    color:black;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.about-col-1 {
+    flex-basis:35%;
+}
+.about-col-1 img {
+    width:100%;
+    border-radius:15px;
+}
+.about-col-2 {
+    flex-basis:60%;
+}
+.sub-title {
+    font-size:60px;
+    font-weight: 600;
+    color:black;
+}
+p {
+    font-size:20px;
+    color:black;
+}
+p span {
+    color:gold;
+}
+
+/*about end*/
+
+
+/*header animation*/
+.header-text {
+    position: absolute;
+    overflow: hidden;
+}
+h1 span {
+    display: block;
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  }
+  
+  @keyframes reveal {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+/*header animation end*/
+
+.form {
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+form {
+    width:90%;
+    max-width:600px;
+}
+.input-group {
+    margin-bottom:30px;
+    position:relative;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid black;
+    color: black;
+    background:black;
+    font-size: 15px;
+}
+label {
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    padding:10px;
+    color:black;
+    cursor:text;
+    transition:0.2s;
+}
+button{
+    padding:10px 0;
+    color: black;
+    outline: none;
+    background:white;
+    border: 1px solid black;
+    width: 100%;
+    cursor:pointer;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top:-35px;
+    font-size:14px;
+}
+
+#project{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+}
+.project-heading h3{
+    font-size:2.7rem;
+    font-weight:600;
+    text-transform:uppercase;
+    color:white;
+}
+.project-heading span{
+    color:gold;
+}
+.project-filter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid white(237,237,237,0.6);
+    flex-wrap:wrap;
+    margin:20px;
+
+}
+.project-filter li{
+    margin:10px;
+    padding: 5px 20px;
+    color: black;
+    font-size:1rem;
+    letter-spacing: 0.5px;
+    font-weight:400;
+    cursor:pointer;
+    user-select:none;
+
+}
+.project-filter-active{
+    background-color:black;
+    color:gold;
+
+}
+.project-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:auto;
+}
+.project-box{
+    width:330px;
+    padding:15px;
+    border: 1px solid black;
+    margin:20px;
+
+}
+.project-box img{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .card:hover {
+    background-color: #e0e0e0;
+  }
+  
